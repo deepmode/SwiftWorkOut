@@ -34,21 +34,38 @@ class ViewController: UIViewController {
     }
     
     func testNetwork() -> Void {
-        let request = Alamofire.request(.GET, "https://httpbin.org/get")
+        //let urlString = "http://hypebeast.com/api/mobile-app-config"
+        //let header:Dictionary<String,String> = ["Content-Type":"application/json","Accept":"application/json"]
         
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-        }
+        let urlString = "http://hypebeast.com/search?s=good"
+        let header:Dictionary<String,String> = ["Content-Type":"application/json","Accept":"application/json"]
+        
+        //let request = Alamofire.request(.GET, "https://httpbin.org/get")
+        //let request = Alamofire.request(.GET, urlString)
+        
+        
+        
+        //  Alamofire.request(.GET, urlString, parameters: ["foo": "bar"])
+        //Alamofire.request(.GET, urlString, parameters: ["foo": "bar"]).responseJSON {response in
+        
+        Alamofire.request(.GET, urlString).responseString { (response) -> Void in
 
-        print("request: \(request)")
+            
+            print("Success: \(response.result.isSuccess)")
+            print("Response String: \(response.result.value)")
+        }
+        
+        
+        Alamofire.request(.GET, urlString, parameters: ["foo": "bar"], encoding: .URL , headers:header).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
     }
 
 
