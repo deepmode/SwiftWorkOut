@@ -17,12 +17,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //good stuff
         testNetwork()
+        testStringFunc()
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func testStringFunc(_: Void)-> Void {
+        let inputStr = "long src=test& with hello"
+        let outputStr = inputStr.stringBetween("src=", and: "& ")
+        print("input: \(inputStr)")
+        print("output: \(outputStr)")
     }
     
     func testNetwork() -> Void {
