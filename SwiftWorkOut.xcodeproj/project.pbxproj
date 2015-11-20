@@ -15,7 +15,7 @@
 		6B9534AA1BFCC2930006A375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9534A81BFCC2930006A375 /* LaunchScreen.storyboard */; };
 		6B9534B51BFCC2930006A375 /* SwiftWorkOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9534B41BFCC2930006A375 /* SwiftWorkOutTests.swift */; };
 		6B9534C01BFCC2930006A375 /* SwiftWorkOutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9534BF1BFCC2930006A375 /* SwiftWorkOutUITests.swift */; };
-		6BE93B4F1BFCD09300FF5FCE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6BE93B4E1BFCD09300FF5FCE /* Podfile */; };
+		6BD5C8BA1BFF05A700150654 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C8B91BFF05A700150654 /* InfoCell.swift */; };
 		8B0D186062FC7A1C95BDBF95 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9BA840B0E68BB538C1FB99 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,10 @@
 		6B9534BB1BFCC2930006A375 /* SwiftWorkOutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftWorkOutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9534BF1BFCC2930006A375 /* SwiftWorkOutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWorkOutUITests.swift; sourceTree = "<group>"; };
 		6B9534C11BFCC2930006A375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BE93B4E1BFCD09300FF5FCE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6BD5C8B91BFF05A700150654 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		6BD5C8BB1BFF0CF400150654 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		6BD5C8BC1BFF0CF400150654 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		6BD5C8BD1BFF0CF400150654 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +89,6 @@
 		6B9534931BFCC2920006A375 = {
 			isa = PBXGroup;
 			children = (
-				6BE93B4E1BFCD09300FF5FCE /* Podfile */,
 				6B95349E1BFCC2920006A375 /* SwiftWorkOut */,
 				6B9534B31BFCC2930006A375 /* SwiftWorkOutTests */,
 				6B9534BE1BFCC2930006A375 /* SwiftWorkOutUITests */,
@@ -109,10 +111,14 @@
 		6B95349E1BFCC2920006A375 /* SwiftWorkOut */ = {
 			isa = PBXGroup;
 			children = (
+				6BD5C8BB1BFF0CF400150654 /* Montserrat-Bold.ttf */,
+				6BD5C8BC1BFF0CF400150654 /* Montserrat-Regular.ttf */,
+				6BD5C8BD1BFF0CF400150654 /* Oswald-Regular.ttf */,
 				6B61B23E1BFD9E9900013445 /* String+SubStrings.swift */,
 				6B95349F1BFCC2930006A375 /* AppDelegate.swift */,
 				6B9534A11BFCC2930006A375 /* ViewController.swift */,
 				6B9534A31BFCC2930006A375 /* Main.storyboard */,
+				6BD5C8B91BFF05A700150654 /* InfoCell.swift */,
 				6B9534A61BFCC2930006A375 /* Assets.xcassets */,
 				6B9534A81BFCC2930006A375 /* LaunchScreen.storyboard */,
 				6B9534AB1BFCC2930006A375 /* Info.plist */,
@@ -226,6 +232,7 @@
 				TargetAttributes = {
 					6B95349B1BFCC2920006A375 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4W3JG447ZD;
 					};
 					6B9534AF1BFCC2930006A375 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -264,7 +271,6 @@
 			files = (
 				6B9534AA1BFCC2930006A375 /* LaunchScreen.storyboard in Resources */,
 				6B9534A71BFCC2930006A375 /* Assets.xcassets in Resources */,
-				6BE93B4F1BFCD09300FF5FCE /* Podfile in Resources */,
 				6B9534A51BFCC2930006A375 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9534A21BFCC2930006A375 /* ViewController.swift in Sources */,
+				6BD5C8BA1BFF05A700150654 /* InfoCell.swift in Sources */,
 				6B61B23F1BFD9E9900013445 /* String+SubStrings.swift in Sources */,
 				6B9534A01BFCC2930006A375 /* AppDelegate.swift in Sources */,
 			);
@@ -483,9 +490,10 @@
 			baseConfigurationReference = 2280036BFC9354E4C3DC7EAF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwiftWorkOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elabvsion.SwiftWorkOut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.101medialab.SwiftWorkOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -495,9 +503,10 @@
 			baseConfigurationReference = 1C1021167D6AA030E8F9FBB7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwiftWorkOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elabvsion.SwiftWorkOut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.101medialab.SwiftWorkOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
