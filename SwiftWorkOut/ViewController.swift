@@ -16,7 +16,6 @@ class HBDataManager {
     
 }
 
-
 struct HBMobileAppConfig {
 }
 
