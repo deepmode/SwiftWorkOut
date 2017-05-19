@@ -11,12 +11,6 @@ import Alamofire
 import SwiftyJSON
 
 
-class HBDataManager {
-    var featureBannerArray:[HBFeatureBanner] = [HBFeatureBanner]()
-    
-}
-
-
 struct HBMobileAppConfig {
 }
 
